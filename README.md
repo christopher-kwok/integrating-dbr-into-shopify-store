@@ -23,15 +23,15 @@ Go to Shopify Admin, select "Online Store" on the left pane, and choose "Themes"
 
 ![Choose Themes](./ScreenShots/step1.1.png)
 
-If you are creating a new store, select the theme "Dawn".
+If you are creating a new store, select the theme "Dawn" by clicking the "Customize" button.
 
 ![Select Dawn](./ScreenShots/step1.2.png)
 
-If you already have an exisiting theme, you can click "Customize" under the "Current Theme" section.
+If you already have an exisiting theme, you can click "Customize" on the "Current Theme".
 
 ![Customize An Existing Theme](./ScreenShots/step1.3.png)
 
-You can also click the three dots (...) to the left of the "Customize" button and skip Step 2.
+You can also click the three dots (...) to the left of the "Customize" button and **skip Step 2**.
 
 ![Edit code](./ScreenShots/step1.4.png)
 
@@ -317,6 +317,6 @@ This file defines the UI of the CameraView instance. Feel free to modify the set
 </template>
 ```
 
-That's it! Now, you have a Shopify store with barcode scanning functions enabled. Click "Preview store" at the top right of the page to try it!
+That's it! Now, you have a Shopify store with barcode scanning functions enabled. Click "**Preview store**" at the top right of the page to try it!
 
 Enjoy!
