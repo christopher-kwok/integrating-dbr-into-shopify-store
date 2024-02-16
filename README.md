@@ -1,22 +1,22 @@
 # Integrating Dynamsoft Barcode Reader SDK into Shopify Store
 
-This is a sample to demonstrate how to integrate the Dynamsoft Barcode Reader SDK JavaScript Edition into a Shopify store.
+This guide provides step-by-step instructions on integrating the Dynamsoft Barcode Reader SDK JavaScript Edition into a Shopify store.
 
 Dynamsoft Barcode Reader JavaScript Edition (DBR-JS) comes with industry-leading algorithms for exceptional speed, accuracy, and read rates in barcode reading. Utilizing its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code. Once the DBR-JS SDK is integrated into your web page, users can access a camera via the browser and read barcodes directly from its video input.
 
-This sample is specifically designed for Shopify and brings the following functions to a Shopify store:
+The sample code in this guide is tailored for Shopify and introduces the following functionalities to a Shopify store:
 
-1. A new barcode scanning icon will be added next to the search icon.
-2. Users can click on the icon, and the camera view will open, initiating barcode scanning right from the Shopify store.
+1. Adds a new barcode scanning icon next to the search icon.
+2. Allows users to click on the icon, opening the camera view for barcode scanning within the Shopify store.
 3. If a barcode is found and decoded, the user will be redirected to the search page, looking for products which have the decoded product code listed in the product description.
 
 ## Prerequisites and Limitations:
 
 - A Shopify web store.
-- The sample was created based on the Dawn theme version 13.0.0. It is not guaranteed to work with other version and themes.
-- It is recommended to create a new store using the Dawn theme for evaluating the sample before modifying your production site using the instructions provided below.
+- All the sample code was created based on the Dawn theme version 13.0.0. It is not guaranteed to work with other versions and themes.
+- It is recommended to create a new store using the Dawn theme to evaluate the sample code before modifying your production site.
 - The key `DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9` specified in the sample code serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test the SDK further, you can request a 30-day free trial license via the Dynamsoft website.
-- No software development skills are needed. Just follow the instructions below, and you will be fine. If you would like to add the functions to your customized Shopify store, HTML/CSS/JavaScript/Shopify development experience will be required.
+- Basic understanding of HTML/CSS/JavaScript/Shopify development is required for customization.
 
 ## Step 1:
 Go to Shopify Admin, select "Online Store" on the left pane, and choose "Theme."
