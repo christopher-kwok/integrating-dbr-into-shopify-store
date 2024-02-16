@@ -54,7 +54,7 @@ This snippet adds a clickable barcode scanning icon next to the search icon.
 ```
 
 ### `dbr.liquid`
-This snippet initiates Dynamsoft Barcode Reader SDK to perform barcode scanning. It will redirect user to search page when a barcode has been found and decoded.
+This snippet initializes the Dynamsoft Barcode Reader SDK to perform barcode scanning. It will redirect the user to the search page when a barcode has been found and decoded.
 
 ```html
 <style>
