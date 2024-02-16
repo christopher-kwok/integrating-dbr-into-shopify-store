@@ -163,10 +163,10 @@ Expand "Sections" on the left pane, go to `header.liquid`, and add the following
 ## Step 6:
 Expand "Assets" on the left pane, and add the following two files:
 
-### dbr-icon.png
+### `dbr-icon.png`
 This is the icon file. Simply upload this file or any icon you prefer. Ensure to update `dbr-icon.liquid` with the correct filename, size, and CSS styles.
 
-### dce.ui.liquid
+### `dce.ui.liquid`
 This file defines the UI of the CameraView instance. Feel free to modify the settings according to your preferences and then upload the file.
 
 ```html
