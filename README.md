@@ -317,6 +317,6 @@ This file defines the UI of the CameraView instance. Feel free to modify the set
 </template>
 ```
 
-That's it! Now, you have a Shopify store with barcode scanning functions enabled. Click "**Preview store**" at the top right of the page to try it!
+That's it! Now, you have a Shopify store with barcode scanning functions enabled. Click "**Preview store**" to try it!
 
 Enjoy!
