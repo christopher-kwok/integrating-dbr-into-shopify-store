@@ -15,20 +15,40 @@ The sample code in this guide is tailored for Shopify and introduces the followi
 - A Shopify web store.
 - All the sample code was created based on the Dawn theme version 13.0.0. It is not guaranteed to work with other versions and themes.
 - It is recommended to create a new store using the Dawn theme to evaluate the sample code before modifying your production site.
-- The key `DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9` specified in the sample code serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test the SDK further, you can request a 30-day free trial license via the Dynamsoft website.
+- The key `DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9` specified in the sample code serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test the SDK further, you can request a [30-day free trial license via the Dynamsoft website](https://www.dynamsoft.com/customer/license/trialLicense?ver=10.0.20&utm_source=shopify&product=dbr&package=js).
 - Basic understanding of HTML/CSS/JavaScript/Shopify development is required for customization.
 
 ## Step 1:
-Go to Shopify Admin, select "Online Store" on the left pane, and choose "Theme."
+Go to Shopify Admin, select "Online Store" on the left pane, and choose "Themes".
+
+![Choose Themes](./ScreenShots/step1.1.png)
+
+If you are creating a new store, select the theme "Dawn" by clicking the "Customize" button.
+
+![Select Dawn](./ScreenShots/step1.2.png)
+
+If you already have an exisiting theme, you can click "Customize" on the "Current Theme".
+
+![Customize An Existing Theme](./ScreenShots/step1.3.png)
+
+You can also click the three dots (...) to the left of the "Customize" button and **skip Step 2**.
+
+![Edit code](./ScreenShots/step1.4.png)
 
 ## Step 2:
-Under the "Current Theme" section shown in the middle of the screen, click the three dots (...) button and select "Edit code" from the menu.
+In the "Customize Dawn" page, click the three dots (...) button at the top left, and select "Edit code" from the menu.
+
+![Edit code](./ScreenShots/step2.png)
 
 ## Step 3:
-Expand "Snippets" on the left pane, and add the following two files.
+Expand "Snippets" on the left pane, and add the following two files. Don't forget to hit the "Save" button after editing the files.
+
+![Edit code](./ScreenShots/step3.png)
 
 ### `dbr-icon.liquid`
 This snippet adds a clickable barcode scanning icon next to the search icon.
+
+> The asset file "dbr-icon.png" will be added in [Step 6](#step-6).
 
 ```html
 <!-- Stylesheet for Dbr icon -->
@@ -55,6 +75,8 @@ This snippet adds a clickable barcode scanning icon next to the search icon.
 
 ### `dbr.liquid`
 This snippet initializes the Dynamsoft Barcode Reader SDK to perform barcode scanning. It will redirect the user to the search page when a barcode has been found and decoded.
+
+> The asset file "dce.ui.liquid" will be added in [Step 6](#step-6).
 
 ```html
 <style>
@@ -137,6 +159,8 @@ This snippet initializes the Dynamsoft Barcode Reader SDK to perform barcode sca
 ### Step 4:
 Expand "Layout" on the left pane, select `theme.liquid`, and add the following lines of code as the first line within the `<head></head>` and the `<body></body>` section respectively:
 
+> Don't forget to hit the "Save" button after editing the file.
+
 ```html
   <head>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.0.21/dist/dbr.bundle.js"></script>
@@ -153,6 +177,8 @@ Expand "Layout" on the left pane, select `theme.liquid`, and add the following l
 ## Step 5:
 Expand "Sections" on the left pane, go to `header.liquid`, and add the following line of code (at line 297) on top of `header-search`:
 
+> Don't forget to hit the "Save" button after editing the file.
+
 ```html
 <!--- Add the following line to include dbr-icon.liquid into header -->
 {% include 'dbr-icon' %}
@@ -162,6 +188,8 @@ Expand "Sections" on the left pane, go to `header.liquid`, and add the following
 
 ## Step 6:
 Expand "Assets" on the left pane, and add the following two files:
+
+> Both files can be found in this repository under "/Assets/".
 
 ### `dbr-icon.png`
 This is the icon file. Simply upload this file or any icon you prefer. Ensure to update `dbr-icon.liquid` with the correct filename, size, and CSS styles.
@@ -289,6 +317,6 @@ This file defines the UI of the CameraView instance. Feel free to modify the set
 </template>
 ```
 
-That's it! Now, you have a Shopify store with barcode scanning functions enabled.
+That's it! Now, you have a Shopify store with barcode scanning functions enabled. Click "**Preview store**" at the top right of the page to try it!
 
 Enjoy!
