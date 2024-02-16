@@ -1,0 +1,20 @@
+<!-- Stylesheet for Dbr icon -->
+<style>
+  #dbr-icon {
+    cursor: pointer;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+
+  #dbr-icon img {
+    height: 24px;
+    width: 24px;
+  }
+</style>
+
+<!-- Placement of Dbr icon -->
+<!-- The function "startDetection()" is defined in dbr.liquid -->
+<div id="dbr-icon" onclick="startDetection()">
+  <img src="{{ 'dbr-icon.png' | asset_url }}" alt="Dynamsoft Barcode Reader">
+</div>
