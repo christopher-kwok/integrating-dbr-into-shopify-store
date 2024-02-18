@@ -175,7 +175,7 @@ Expand "Layout" on the left pane, select `theme.liquid`, and add the following l
 ```
 
 ## Step 5:
-Expand "Sections" on the left pane, go to `header.liquid`, and add the following line of code (at line 297) on top of `header-search`:
+Expand "Sections" on the left pane, go to `header.liquid`, and add the following line of code (at line 296) on top of `header-search`:
 
 > Don't forget to hit the "Save" button after editing the file.
 
