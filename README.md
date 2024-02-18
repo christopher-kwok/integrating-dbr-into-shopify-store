@@ -21,29 +21,29 @@ The sample code in this guide is tailored for Shopify and introduces the followi
 ## Step 1:
 Go to Shopify Admin, select "Online Store" on the left pane, and choose "Themes".
 
-![Choose Themes](./ScreenShots/step1.1.png)
+![Choose Themes](./Screenshots/step1.1.png)
 
 If you are creating a new store, select the theme "Dawn" by clicking the "Customize" button.
 
-![Select Dawn](./ScreenShots/step1.2.png)
+![Select Dawn](./Screenshots/step1.2.png)
 
 If you already have an exisiting theme, you can click "Customize" on the "Current Theme".
 
-![Customize An Existing Theme](./ScreenShots/step1.3.png)
+![Customize An Existing Theme](./Screenshots/step1.3.png)
 
 You can also click the three dots (...) to the left of the "Customize" button and **skip Step 2**.
 
-![Edit code](./ScreenShots/step1.4.png)
+![Edit code](./Screenshots/step1.4.png)
 
 ## Step 2:
 In the "Customize Dawn" page, click the three dots (...) button at the top left, and select "Edit code" from the menu.
 
-![Edit code](./ScreenShots/step2.png)
+![Edit code](./Screenshots/step2.png)
 
 ## Step 3:
 Expand "Snippets" on the left pane, and add the following two files. Don't forget to hit the "Save" button after editing the files.
 
-![Edit code](./ScreenShots/step3.png)
+![Edit code](./Screenshots/step3.png)
 
 ### `dbr-icon.liquid`
 This snippet adds a clickable barcode scanning icon next to the search icon.
@@ -112,7 +112,7 @@ This snippet initializes the Dynamsoft Barcode Reader SDK to perform barcode sca
   Dynamsoft.Core.CoreModule.loadWasm(["DBR"]);
 
   (async () => {
-  	// Create a `CaptureVisionRouter` instance
+    // Create a `CaptureVisionRouter` instance
     router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
     // Create a `CameraEnhancer` instance for camera control and a `CameraView` instance for UI control.
