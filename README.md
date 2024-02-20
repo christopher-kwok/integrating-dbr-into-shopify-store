@@ -2,7 +2,7 @@
 
 This guide provides step-by-step instructions on integrating the Dynamsoft Barcode Reader SDK JavaScript Edition into a Shopify store.
 
-Dynamsoft Barcode Reader JavaScript Edition (DBR-JS) comes with industry-leading algorithms for exceptional speed, accuracy, and read rates in barcode reading. Utilizing its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code. Once the DBR-JS SDK is integrated into your web page, users can access a camera via the browser and read barcodes directly from its video input.
+[Dynamsoft Barcode Reader JavaScript Edition](https://www.dynamsoft.com/barcode-reader/sdk-javascript/) (DBR-JS) comes with industry-leading algorithms for exceptional speed, accuracy, and read rates in barcode reading. Utilizing its well-designed API, you can turn your web page into a barcode scanner with just a few lines of code. Once the DBR-JS SDK is integrated into your web page, users can access a camera via the browser and read barcodes directly from its video input.
 
 The sample code in this guide is tailored for Shopify and introduces the following functionalities to a Shopify store:
 
