@@ -10,13 +10,7 @@ The sample code in this guide is tailored for Shopify and introduces the followi
 2. Allows users to click on the icon, opening the camera view for barcode scanning within the Shopify store.
 3. If a barcode is found and decoded, the user will be redirected to the search page, looking for products which have the decoded product code listed in the product description.
 
-<p float="left">
-  <img src="/Screenshots/shopify1.jpg" width="100" />
-  <img src="/Screenshots/shopify2.jpg" width="100" /> 
-  <img src="/Screenshots/shopify3.jpg" width="100" />
-</p>
-
-![Click the Icon](./Screenshots/shopify1.jpg) ![Camera Opens](./Screenshots/shopify2.jpg) ![Redirect to Search Page](./Screenshots/shopify3.jpg)
+  <img src="/Screenshots/shopify1.jpg" width="200" /> <img src="/Screenshots/shopify2.jpg" width="200" /> <img src="/Screenshots/shopify3.jpg" width="200" />
 
 ## Prerequisites and Limitations:
 
