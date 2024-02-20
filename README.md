@@ -104,8 +104,6 @@ This snippet initializes the Dynamsoft Barcode Reader SDK to perform barcode sca
   const cameraViewContainer = document.querySelector("#cameraViewContainer")
   let router = null;
   let cameraEnhancer;
-  let view;
-  let filter;
   let isInitialized = false;
 
   async function initialize() {
@@ -120,7 +118,7 @@ This snippet initializes the Dynamsoft Barcode Reader SDK to perform barcode sca
       router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
       // Create a `CameraEnhancer` instance for camera control and a `CameraView` instance for UI control.
-      view = await Dynamsoft.DCE.CameraView.createInstance("{{ 'dce.ui.liquid' | asset_url }}");
+      let view = await Dynamsoft.DCE.CameraView.createInstance("{{ 'dce.ui.liquid' | asset_url }}");
       cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
       cameraViewContainer.append(view.getUIElement());
 
@@ -135,7 +133,7 @@ This snippet initializes the Dynamsoft Barcode Reader SDK to perform barcode sca
       }});
 
       // Filter out unchecked and duplicate results.
-      filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+      let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
       filter.enableResultCrossVerification(
         Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
       );
