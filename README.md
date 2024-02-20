@@ -17,7 +17,7 @@ The sample code in this guide is tailored for Shopify and introduces the followi
 - It is recommended to create a new store using the Dawn theme to evaluate the sample code before modifying your production site.
 - The key `DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9` specified in the sample code serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test the SDK further, you can request a [30-day free trial license via the Dynamsoft website](https://www.dynamsoft.com/customer/license/trialLicense?ver=10.0.20&utm_source=shopify&product=dbr&package=js).
 
-  > Since it's a special license key, you will see a prompt about this license every time it is initialized. The prompt will disappear if you acquire a private 30-day trial or a production license key.
+  > Since it's a special 24-hour license, you will see a prompt about this license every time it is initialized. The prompt will disappear if you acquire a private 30-day trial or a production license.
 - Basic understanding of HTML/CSS/JavaScript/Shopify development is required for customization.
 
 ## Step 1:
