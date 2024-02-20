@@ -104,50 +104,57 @@ This snippet initializes the Dynamsoft Barcode Reader SDK to perform barcode sca
   const cameraViewContainer = document.querySelector("#cameraViewContainer")
   let router = null;
   let cameraEnhancer;
+  let view;
+  let filter;
+  let isInitialized = false;
 
-  // initialize license
-  Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+  async function initialize() {
+    if (!isInitialized) {
+      // initialize license
+      Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 
-  // preload the libraries
-  Dynamsoft.Core.CoreModule.loadWasm(["DBR"]);
+      // preload the libraries
+      Dynamsoft.Core.CoreModule.loadWasm(["DBR"]);
 
-  (async () => {
-    // Create a `CaptureVisionRouter` instance
-    router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+      // Create a `CaptureVisionRouter` instance
+      router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
-    // Create a `CameraEnhancer` instance for camera control and a `CameraView` instance for UI control.
-    let view = await Dynamsoft.DCE.CameraView.createInstance("{{ 'dce.ui.liquid' | asset_url }}");
-    cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
-    cameraViewContainer.append(view.getUIElement());
+      // Create a `CameraEnhancer` instance for camera control and a `CameraView` instance for UI control.
+      view = await Dynamsoft.DCE.CameraView.createInstance("{{ 'dce.ui.liquid' | asset_url }}");
+      cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
+      cameraViewContainer.append(view.getUIElement());
 
-    // Set `CameraEnhancer` instance as its image source.
-    router.setInput(cameraEnhancer);
+      // Set `CameraEnhancer` instance as its image source.
+      router.setInput(cameraEnhancer);
 
-    // Define a callback for results.
-    router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
-      if (result.barcodeResultItems.length > 0) {
-        window.location = window.location.origin + '/search?q=' + result.barcodeResultItems[0].text;
-      }
-    }});
+      // Define a callback for results.
+      router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+        if (result.barcodeResultItems.length > 0) {
+          window.location = window.location.origin + '/search?q=' + result.barcodeResultItems[0].text;
+        }
+      }});
 
-    // Filter out unchecked and duplicate results.
-    let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-    filter.enableResultCrossVerification(
-      Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
-    );
-    filter.enableResultDeduplication(
-      Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
-    );
-    await router.addResultFilter(filter);
-  })();
+      // Filter out unchecked and duplicate results.
+      filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+      filter.enableResultCrossVerification(
+        Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
+      );
+      filter.enableResultDeduplication(
+        Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
+      );
+      await router.addResultFilter(filter);
+      isInitialized = true;
+    }
+  }
 
   // Display camera view, open camera and start scanning single barcode.
   async function startDetection() {
-    if (cameraViewContainer.style.display == "block") {
+    await initialize();
+    if (cameraViewContainer.style.display == "inline") {
       cameraViewContainer.style.display = "none";
       await cameraEnhancer.close();
     } else {
-      cameraViewContainer.style.display = "block";
+      cameraViewContainer.style.display = "inline";
       await cameraEnhancer.open();
       await router.startCapturing("ReadSingleBarcode");
     }
