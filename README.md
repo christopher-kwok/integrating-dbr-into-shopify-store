@@ -134,6 +134,9 @@ This snippet initializes the Dynamsoft Barcode Reader to perform barcode scannin
       // Define a callback for results.
       router.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
         if (result.barcodeResultItems.length > 0) {
+          // Stop the capture process once a barcode has been detected
+          router.stopCapturing();
+          // Redirect to the search page with the decoded result
           window.location = window.location.origin + '/search?q=' + result.barcodeResultItems[0].text;
         }
       }});
@@ -146,6 +149,7 @@ This snippet initializes the Dynamsoft Barcode Reader to perform barcode scannin
       filter.enableResultDeduplication(
         Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE, true
       );
+      filter.setDuplicateForgetTime(5000);
       await router.addResultFilter(filter);
       isInitialized = true;
     }
