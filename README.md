@@ -16,8 +16,8 @@ The following are screenshots of a Shopify store with the sample code implemente
 
 ## Prerequisites and Limitations:
 
-- A Shopify web store.
-- All the sample code was created based on the Dawn theme version 13.0.0. It is not guaranteed to work with other versions and themes.
+- You require a Shopify web store. If you prefer not to modify your production store, please create a trial store.
+- All the sample code was created based on the Dawn theme version 13.0.x. It is not guaranteed to work with other versions and themes.
 - It is recommended to create a new store using the Dawn theme to evaluate the sample code before modifying your production site.
 - The key `DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9` specified in the sample code serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test DBR-JS further, you can request a [30-day free trial license via the Dynamsoft website](https://www.dynamsoft.com/customer/license/trialLicense?ver=10.0.20&utm_source=shopify&product=dbr&package=js).
 
